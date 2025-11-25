@@ -28,18 +28,18 @@ public class UserManagementDemo {
 
         //REMOVING ACTIVE USERS
 
-        Iterator<User> iterator = users.iterator();
-        while (iterator.hasNext()) {
-            User user = iterator.next();
-            if(!user.isActive()){
-                iterator.remove();
+        Iterator<User> it = users.iterator();
+        while (it.hasNext()) {
+            User u = it.next();
+            if(!u.isActive()){
+                it.remove();
             }
 
             //PRINT ACTIVE USER
             System.out.println("Active users ");
 
-            for(User u : users){
-                System.out.println(u.getName());
+            for(User us : users){
+                System.out.println(us.getName());
             }
 
         }
